@@ -54,4 +54,17 @@ public class ChargementFormateursStepConfig {
 				.reader(formateurItemReader(null)).writer(formateurItemWriter()).build();
 	}
 
+//	@Bean
+//	public JdbcBatchItemWriter<Formateur> formateurItemWriter(final DataSource dataSource) {
+//		return new JdbcBatchItemWriterBuilder<Formateur>().dataSource(dataSource).sql(FORMATEURS_INSERT_QUERY)
+//				.itemPreparedStatementSetter(new FormateurItemPreparedStatementSetter()).build();
+//	}
+
+	// Une fois ce step créé, il faut la déclarer dans le job
+//	@Bean
+//	public Step chargementFormateursStep(final StepBuilderFactory builderFactory) {
+//		return builderFactory.get("chargementFormateursStep").<Formateur, Formateur>chunk(10)
+//				.reader(formateurItemReader(null)).writer(formateurItemWriter(null)).build();
+//	}
+
 }

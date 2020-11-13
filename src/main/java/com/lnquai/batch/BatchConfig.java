@@ -26,7 +26,9 @@ public class BatchConfig {
 	@Bean
 	public JobParametersValidator defaultJobParametersValidator() {
 		DefaultJobParametersValidator bean = new DefaultJobParametersValidator();
-		bean.setRequiredKeys(new String[] { "formateursFile", "formationsFile", "seancesFile" });
+		// bean.setRequiredKeys(new String[] { "formateursFile", "formationsFile",
+		// "seancesFile" });
+		bean.setRequiredKeys(new String[] { "formateursFile" });
 		bean.setOptionalKeys(new String[] { "run.id" });// Permet d'eviter l'erreur d'executer plusieurs fois un batch
 		return bean;
 	}
